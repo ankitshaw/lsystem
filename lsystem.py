@@ -11,7 +11,7 @@ _DRAW_SPEED = 100
 _AXIOM_LIMIT = 5
 _RULE_LIMIT = 10
 _CURRENT_ANGLE = 0
-_LINE_LENGTH = 50
+_LINE_LENGTH = 25
 
 _AXIOM = ""
 _RULES = {}
@@ -152,12 +152,11 @@ def draw(axiom, currentAngle, length):
 
 
 def main():
+  global _STRING
   getGrammer()
-  myString = generateStringFromGrammer()
-  currentAngle = _CURRENT_ANGLE
-  lineLength = _LINE_LENGTH
+  _STRING = generateStringFromGrammer()
   
-  draw(myString, currentAngle, lineLength)
+  draw(_STRING, _CURRENT_ANGLE, _LINE_LENGTH)
 
 if __name__ == "__main__":
   main()
